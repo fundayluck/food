@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Text, View, StyleSheet } from "react-native";
 import SearchBar from "../components/SearchBar";
 import useResults from "../hooks/useResults";
+import ResultList from "../components/ResultList";
 
 const SearchScreen = () => {
   const [term, setTerm] = useState("");
@@ -16,6 +17,9 @@ const SearchScreen = () => {
       />
       {errorMessage ? <Text>{errorMessage}</Text> : null}
       <Text>we have found {results.length} results</Text>
+      <ResultList title="Cost Effective" />
+      <ResultList title="Bit Pricier" />
+      <ResultList title="Big Spender" />
     </View>
   );
 };
