@@ -5,17 +5,22 @@ const ResultDetail = ({ result }) => {
   return (
     <View>
       <Image style={styles.imageStyle} source={{ uri: result.image_url }} />
-      <Text>{result.name}</Text>
+      <Text style={styles.nameStyle}>{result.name}</Text>
+      <Text>
+        {result.rating} Stars, {result.review_count} Reviews
+      </Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   imageStyle: {
-    width: 200,
-    height: 200,
+    width: 250,
+    height: 120,
     borderRadius: 4,
-    marginBottom: 5,
+  },
+  nameStyle: {
+    fontWeight: "bold",
   },
 });
 
