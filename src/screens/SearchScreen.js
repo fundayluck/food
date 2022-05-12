@@ -16,7 +16,13 @@ const SearchScreen = () => {
   };
 
   return (
-    <View style={{ backgroundColor: "#ffffff", height: "100%" }}>
+    <View
+      style={{
+        backgroundColor: "#ffffff",
+        height: "100%",
+        flex: 1,
+      }}
+    >
       <SearchBar
         term={term}
         onTermChange={setTerm}
